@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 5</title>
+    <style>
+         body{
+            background-color: blue;
+            text-align: center;
+        }
+        header{
+            color: white;
+        }
+        footer{
+            color: white;
+        }
+        section{
+            background-color: white;
+            text-align: left;
+            border-radius: 20px;
+            margin: auto;
+            padding: 15px;
+            width: 500px;
+            margin: auto;
+            box-shadow: 3px 3px 10px black;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Analizador de numeros</h1>
+    </header>
+    <section>
+        <div>
+            <label for="v" id="va">Digite um numero de 1 a 100</label>
+            <input type="number" id="text">
+            <input type="button" id="bot" value="Adicionar" onclick="Adicionar()">
+        </div>
+        <div>
+            <select name="add" id="seltab" size="10"></select>
+            <input type="button" id="bot2" value="finalizar" onclick="finalizar()">
+        </div>
+        <div id="show">
+            
+        </div>
+
+    </section>
+    <footer>
+        <h2>#todos os direitos reservados</h2>
+    </footer>
+    <script>
+        function Adicionar(){
+            let texto = document.getElementById('text')
+            let tab = document.querySelector('select#seltab')
+            let item = document.createElement('option')
+            let t = Number(texto.value)
+            let valores = []
+
+            if(texto.value.length == 0){
+                alert('você não digitou nenhum numero')
+            } else if(t > 100 || t < 1){
+                alert('digite numeros menores que 100 e que sejam maiores que 1')
+            } else {
+                item.text = 'valor adicionado ' +t
+            tab.appendChild(item)
+                    function finalizar(){
+                    var mos = document.getElementById('show')
+                    mos.innerHTML = ('Os valores adicionados são ' +tab)
+                    }
+            }
+
+        }
+  
+    </script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+           text-align: center;
+            background-color: blue;
+            display: auto;
+        }
+        section{
+            text-align: left;
+            background-color: white;
+            border-radius: 5px;
+            margin: auto;
+            margin-left: 400px;
+            margin-right: 400px;
+        }
+        .teste{
+            margin-left: 500;
+        }
+        p{
+            margin-left: 300px;
+        }
+        h1{
+            color: white;
+        }
+
+        h2{
+            color: white;
+        }
+        h3{
+            margin-left: 30px;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Verificador de idade</h1>
+    </header>
+
+    <section>
+        <div id="ano">
+            
+            <h4> <label for="nascimento" id="texto">Ano de Nascimento:</label>
+            <input type="text" id="valor"></h4>
+        </div>
+        <div id="dados">
+           <h3><label for="sex" id="sexo">Sexo:</label>
+            <input type="radio" id="fem" name="radsex" value="feminino"> 
+            <label for="sex" id="fe">Feminino</label>
+            <input type="radio" id="mas" name="radsex" value="masculino">
+            <label for="sex" id="ma">Masculino</label></h3> 
+        </div>
+        <div id="botao">
+           <p><input type="button" id="bot" name="verificar" value="verificar" onclick="validar()"></p> 
+        </div>
+        <div id="show" class="teste">
+            show
+        </div>
+    </section>
+
+    <footer>
+        <h2>#todos os direitos reservados</h2>
+    </footer>
+    <script>
+        function validar(){
+            var anos = document.getElementById('valor')
+            var an = parseInt(anos.value)
+            var tempo = new Date()
+            var nasc = tempo.getFullYear()
+            var idade = nasc - an
+            var mostrar = document.getElementById('show')
+            var sexos = document.getElementsByName('radsex')
+            var genero = ''
+            var img = document.createElement('img')
+            img.setAttribute('id', 'foto')
+            
+            if(an > nasc || anos.value.length == 0){
+                alert('Por gentileza coloque os valores corretos')
+            }else{
+                if(sexos[0].checked){
+                    genero ='Feminino'
+                    mostrar.style.textAlign = 'center'
+                    mostrar.innerHTML = 'sua idade é '+idade+' anos e você é do genero ' + genero +''
+                     if(idade >= 0 && idade < 10){
+                        img.setAttribute('src','foto.manha.jpeg')
+                     }else if(idade < 21){
+
+                     }else if(idade < 50){
+
+                     }
+
+
+
+
+                }else if(sexos[1].checked){
+                    genero = "masculino"
+                    mostrar.style.textAlign = 'center'
+                    mostrar.innerHTML = 'sua idade é '+idade+' anos e você é do genero ' + genero +''
+                }
+                mostrar.appendChild(img)
+               // mostrar.innerHTML = 'sua idade é '+idade+' anos e você é do genero ' + genero +''
+            }
+
+        }
+
+    </script>
+</body>
+</html>

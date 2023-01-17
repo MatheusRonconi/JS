@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color: blue;
+            text-align: center;
+        }
+        header{
+            color: white;
+        }
+        section{
+            background-color: white;
+            text-align: left;
+            margin: auto;
+            margin-left: 400px;
+            margin-right: 400px;
+            border-radius: 30px;
+        }
+        footer{
+            color: white;
+        }
+        p{
+            margin-left: 50px;
+        }
+        h2{
+            margin-left: 500px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Vamos contar</h1>
+    </header>
+    <section>
+        <div>
+            <p><label for="c" id="co">Começo</label>
+            <input type="text" id="comeco"></p>
+            <p><label for="pa" id="p">Passo</label>
+            <input type="text" id="passo"></p>
+            <p><label for="fi" id="f">Fim</label>
+            <input type="text" id="final"></p>
+           <h2><input type="button" id="bot" value="verificar" onclick="validar()"></h2> 
+        </div>
+        <div id="show">
+            Aqui vai se somar os resultados
+        </div>
+    </section>
+    <footer>
+
+    </footer>
+    <script>
+        function validar(){
+            let come = document.getElementById('comeco')
+            let pass = document.getElementById('passo')
+            let fim = document.getElementById('final')
+            let mos = document.getElementById('show') 
+            
+            if(come.value.length == 0 || pass.value.length == 0 || fim.value.length == 0){
+               mos.innerHTML=('impossivel calcular')
+                alert('valores estão faltando')
+            }else {
+                mos.style.textAlign = 'center'
+                mos.innerHTML = ('contando...   ')
+                let c = Number(come.value)
+                let p = Number(pass.value)
+                let f = Number(fim.value)
+                    if(p<= 0){
+                        alert('passo invalido considerando passo 1')
+                        p=1
+                    }
+                    if(c < f){
+                        for(let i = c; i <= f; i += p){
+                    mos.innerHTML += (+i)
+                }
+                    }else{
+                            for(let i = c; i >= f; i += p){
+                                mos.innerHTML += (+i)
+                            }
+                        }
+
+            }
+
+            
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color: blue;
+            text-align: center;
+        }
+        header{
+            color: white;
+        }
+        footer{
+            color: white;
+        }
+        section{
+            background-color: white;
+            text-align: left;
+            border-radius: 20px;
+            margin: auto;
+            padding: 15px;
+            width: 500px;
+            margin: auto;
+            box-shadow: 3px 3px 10px black;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tabuada</h1>
+    </header>
+    <section>
+        <div>
+            <label for="n" id="nu">Numero: </label>
+            <input type="number" id="text">
+            <input type="button" id="bot" value="Gerar Tabuada" onclick="tabuada()">
+        </div>
+        <div>
+            <select name="tabuada" id="seltab" size="10"></select>
+        </div>
+    </section>
+    <footer>
+        <h2>#todos os direitos reservados</h2>
+    </footer>
+    <script>
+        function tabuada(){
+            let num = document.getElementById('text')
+            let tab = document.getElementById('seltab')
+
+           
+            if(num.value.length == 0){
+                alert('nenhum valor inserido')
+            }else{
+                let n = Number(num.value)
+                let c  = 1
+                while(c <= 10){
+                    let item = document.createElement('option')
+                    item.text = n+' x '+c+ ' = ' +n*c
+                    tab.appendChild(item)
+                    c++
+                }
+            }
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste-front</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        header{
+            margin: auto;
+            width: 70%;
+        }
+        section{
+            background-color: white;
+            margin: auto;
+            width: 70%;
+        }
+        footer{
+            margin: auto;
+            width: 70%;
+           
+        }
+        .row{
+            display: flex;
+            content: "";
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .columnleftside {
+            width: 50%;
+            font-family: justify;
+            text-align: left;
+            margin-left: 50px;
+        }
+        .columnrigtside {
+            width: 50%;
+        }
+        .column{
+            color: green;
+            width: 50%;
+        }
+        ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #9bcf34;
+        }
+
+        li {
+        float: left;
+        }
+
+        li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 40px;
+        text-decoration: none;
+        }
+        .di{
+            width: 90%;
+            text-align: left;
+        }
+        .es{
+            color: white;
+            text-align: right;
+        }
+        .a{
+            color: #1e1e1e;
+            font-size: 50px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .b{
+            color: black;
+        }
+        .c{
+            width: 90%;
+            font-size: small;
+            text-align: left;
+        }
+        .d{
+            opacity: 40%;
+            color: grey;
+        }
+        .e{
+            height: 70px;
+            width: 300px;
+        }
+        .f{
+            height: 260px;
+            width: 260px;
+        }
+        .g{
+            margin-left: -7px;
+            margin-right: -7px;
+            background-color: #92af58;
+            background: linear-gradient(180deg, rgb(163, 219, 52) 10%, rgb(240, 242, 242) 20%);
+        }
+        .h{
+            margin-top: -20px;
+            margin-bottom: -15px;
+            margin-left: -7px;
+            margin-right: -7px;
+            background: rgb(5,8,0);
+            background: linear-gradient(0deg, rgba(5,8,0,1) 20%, rgba(62,94,0,1) 70%, rgba(62,94,0,1) 100%);
+        }
+        .i{
+            height: 20px;
+            width: 1080px;
+        }
+        .j{
+            border-right-style: dotted;
+            border-left-style: dotted;
+            opacity: 100%;
+        }
+        p{
+            color: #7d9f41;
+            font-family: arial;
+        }
+        h1{
+            text-align: right;
+            color: #7d9f41;
+            font-family: arial;
+            font-size: small;
+        }
+        img{
+            height: 120px;
+            width: 100px;
+        }
+        .bt{
+            color: white;
+            border-radius: 8px;
+            border-color: green;
+            background-color: #6f9e10;
+            width: 120px;
+            
+        }
+        .linha{
+            background-color: #6f9e10;
+            width: 100%;
+            height: 5px;
+            border: 2px green;
+        }
+    </style>
+</head>
+<body>
+    <div class="h">
+     <header>
+            <div class="row">
+                <div class="di">
+                    <img src="logo1.png" alt="FM informatica" class="e">
+                </div>
+                <div class="es">
+                (12) 3993-9999 <br>
+                (12) 7818-9999 <br>
+                ID: 90*554433
+                </div>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#empresa">Empresa</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#garantia">Garantia</a></li>
+                    <li><a href="#localização">Localização</a></li>
+                    <li><a href="#cadastro">Cadastro</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
+     </header>
+    </div>
+    <div class="g">
+        <section>
+            
+            <div class="row">
+                <div class="columnleftside">
+                    <div>
+                    <p class="a">Os melhores preços</p>
+                    </div>
+                    <div>
+                        <p>Os melhores preços em equipamentos de informatica, só aqui na FM distribuição</p>
+                    </div>
+                    <div>
+                        <p class="b">cadastre-se para ter acesso em nossa tabela de preços</p>
+                    </div>
+                </div>
+
+                <div class="columnrigtside">
+                    <div>
+                        <img src="tech.jpg" alt="distribuidora de informatica" class="f">
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <img src="linha.jpg" alt="linha verde" class="i">
+            </div>
+            <div class="row">
+                <div class="column">
+                <p class="d">memoria RAM</p> 
+                <img src="memoria.jpg" alt="memoria RAM"><br>
+                    <input class="bt" type="button" id="bot" value="consulte" >
+                </div >
+                <div class="column">
+                    <div class="j">
+                        <p class="d">placas mãe</p> 
+                        <img src="placa.jpg" alt="placa mãe"><br>
+                        <input class="bt" type="button" id="bot" value="consulte">
+                    </div>
+                </div>
+                <div class="column">
+                    <p class="d">Pen drives</p> 
+                    <img src="pendrive.jpg" alt="pen drive"><br>
+                    <input class="bt" type="button" id="bot" value="consulte">
+                </div>
+                <div class="column" >
+                    <div class="j">
+                        <p class="d">perifericos</p> 
+                        <img src="perifericos.jpg" alt="perifericos"><br>
+                        <input class="bt" type="button" id="bot" value="consulte">
+                    </div>
+                </div>
+                <div class="column">
+                    <p class="d">computadores</p> 
+                    <img src="computador.jpg" alt="computador"> <br>
+                    <input class="bt" type="button" id="bot" value="consulte">
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div class="row">
+            <p class="c">Rua João Paulo II, 450  sl.4 - São José dos Campos -SP</p>
+            <h1>-RM07-</h1>
+        </div>
+    </footer>
+</body>
+</html>

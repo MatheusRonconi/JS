@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color: blue;
+            text-align: center;
+        }
+        section{
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-left: 350px;
+            margin-right: 350px;
+        }
+        h1{
+           color: white; 
+        }
+        h2{
+            color: white;
+        }
+    </style>
+</head>
+<body onload="tela()">
+    <header>
+        <h1>Relogio Interativo</h1>
+    </header>
+    <section>
+        <div id="men"> 
+              
+        </div>
+        <div id="foto">
+            <img id="manha" src="manha.jpeg" alt="periodo do dia"> 
+            
+        </div>            
+       
+    </section>
+    <footer>
+        <h2>#todos os direitos reservados</h2>
+    </footer>
+    <script>
+        function tela(){
+            var fotos = document.getElementById('manha')
+            var mens = document.getElementById('men')
+            var teste = document.getElementById('foto')
+            var tempo = new Date()
+          var hora = tempo.getHours()
+            mens.innerHTML = 'agora são '+hora+" horas"
+          // var hora = 11
+            if(hora >=0 && hora < 12 )
+            {
+                document.body.style.background = 'green'
+               fotos.src = "manha.jpeg"
+            }else if(hora >= 12 && tempo <= 18)
+            {
+                document.body.style.background = 'black'
+             
+            }else 
+            {
+               fotos.src = "tarde.jpeg"
+                document.body.style.background = 'pink'
+            }
+        }
+        
+     </script>
+</body>
+</html>

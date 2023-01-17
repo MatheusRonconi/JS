@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula de teste</title>
+    <style>
+        body{
+            background-color: pink;
+            color: white;
+            font: normal 18pt arial;
+        }
+        div#mouse{
+            background-color: black;
+            color: white;
+            font: normal 20pt arial;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Testar o DOM, o que é o DOM</h1>
+
+    <p>DOM é </p>
+
+    <p>Document Object Model</p>
+
+    <div id="div"> 
+        clique em mim
+    </div>
+
+    <div id="mouse" >
+         interaja... 
+        </div>
+
+    <script>
+        var teste = window.document.querySelector('div#div')
+        var paragrafo1 = window.document.getElementsByTagName('p')[0]
+        window.document.write('isso que está escrito no paragrafo 1 '+ paragrafo1.innerHTML)
+      //  teste.style.background = 'blue';
+      teste.style.color = 'blue'
+
+
+
+
+
+
+
+      var aula2 = window.document.getElementById('mouse')
+        aula2.addEventListener('click', clicar)
+        aula2.addEventListener('mouseenter',entrar)
+        aula2.addEventListener('mouseout',sair)
+        
+      function clicar() { 
+        aula2.innerText = 'clicou'
+        aula2.style.background = 'red'
+      }
+      function entrar() {
+        aula2.innerText = 'passou o mouse'
+        aula2.style.background = 'pink'
+      }
+      function sair() {
+        aula2.innerText = 'retirou o mouse'
+        aula2.style.background = 'blue'
+      }
+    </script>
+</body>
+</html>

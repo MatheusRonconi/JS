@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste</title>
+</head>
+<body>
+    <div id="t">
+        <input type="button" id="for" name="calcular" value="while" onclick="esse()">
+        <input type="button" id="while" name="calcul" value="for" onclick="testando()">
+    </div>
+   <div id="teste">
+     <br>Aparecer Aqui</br>
+    </div>
+    <script>
+        function testando(){
+            let mos = document.getElementById('teste')
+            let c = 1
+           let i = 1
+           for(c; c <= 100; c++){
+            mos.innerHTML += ' '+c+'' 
+           }
+         /*  */
+           // mos.innerHTML += +(c+i)
+        }
+        function esse(){
+            let mos = document.getElementById('teste')
+            let c = 0
+           let i = 1
+            while(c < 100){
+                c++
+                mos.innerHTML += ' '+c+''
+            }
+        }
+    </script>
+</body>
+</html>
